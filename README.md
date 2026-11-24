@@ -1,4 +1,4 @@
-# Ritual
+# Rituals
 
 A PWA for tracking skin care, hair care and diet plans. It runs entirely in the browser: there's no server and no account, and it works offline. It installs on iPhone and Android.
 

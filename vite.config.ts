@@ -14,8 +14,8 @@ export default defineConfig({
       devOptions: { enabled: true, type: 'module' },
       injectManifest: { globPatterns: ['**/*.{js,css,html,svg,png,woff2}'] },
       manifest: {
-        name: 'Ritual — routines & tracker',
-        short_name: 'Ritual',
+        name: 'Rituals — routines & tracker',
+        short_name: 'Rituals',
         description: 'Daily tracker for skin care, hair care and diet plans.',
         theme_color: '#000000',
         background_color: '#000000',

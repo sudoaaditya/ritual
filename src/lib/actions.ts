@@ -183,7 +183,7 @@ type Backup = Awaited<ReturnType<typeof exportData>>;
 const ALL = () => [db.plans, db.items, db.logs, db.milestones, db.checkins, db.photos];
 
 export async function importData(data: Backup) {
-  if (data?.app !== 'ritual') throw new Error('Not a Ritual backup file');
+  if (data?.app !== 'ritual') throw new Error('Not a Rituals backup file');
   const photos: Photo[] = await Promise.all(
     (data.photos ?? []).map(async ({ data: d, ...p }) => ({ ...p, blob: await (await fetch(d)).blob() })),
   );

@@ -1,5 +1,5 @@
 /// <reference lib="webworker" />
-// Offline-only service worker: precaches the app shell so Ritual opens without a network.
+// Offline-only service worker: precaches the app shell so Rituals opens without a network.
 import { cleanupOutdatedCaches, createHandlerBoundToURL, precacheAndRoute } from 'workbox-precaching';
 import { NavigationRoute, registerRoute } from 'workbox-routing';
 import { clientsClaim } from 'workbox-core';

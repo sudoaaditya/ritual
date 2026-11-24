@@ -55,7 +55,7 @@ export function Welcome() {
           </defs>
         </Ring>
       </div>
-      <div className="large-title" style={{ textAlign: 'center' }}>Welcome to Ritual</div>
+      <div className="large-title" style={{ textAlign: 'center' }}>Welcome to Rituals</div>
       <div className="subtitle" style={{ textAlign: 'center' }}>What would you like to keep track of? Pick any — you can change everything later.</div>
 
       <div className="stack">

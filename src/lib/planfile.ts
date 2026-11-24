@@ -85,7 +85,7 @@ function parseSchedule(s: FileSchedule | undefined, fallbackAnchor: string, wher
 /** Validate + convert. Throws a readable error on bad input. */
 export function parsePlanFile(data: unknown): { plans: Plan[]; items: Item[]; milestones: Milestone[] } {
   const f = data as PlanFile;
-  if (f?.app !== 'ritual' || f.type !== 'plans' || !Array.isArray(f.plans)) throw new Error('Not a Ritual plan file');
+  if (f?.app !== 'ritual' || f.type !== 'plans' || !Array.isArray(f.plans)) throw new Error('Not a Rituals plan file');
   const plans: Plan[] = [];
   const items: Item[] = [];
   const milestones: Milestone[] = [];

@@ -9,3 +9,4 @@ tsconfig.tsbuildinfo
 # personal routine / backup files — never commit
 my-routine*.json
 ritual-backup-*.json
+rituals-backup-*.json

@@ -37,7 +37,7 @@ export function Settings() {
     const blob = new Blob([JSON.stringify(await exportData(), null, 2)], { type: 'application/json' });
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
-    a.download = `ritual-backup-${new Date().toISOString().slice(0, 10)}.json`;
+    a.download = `rituals-backup-${new Date().toISOString().slice(0, 10)}.json`;
     a.click();
     URL.revokeObjectURL(a.href);
   };
@@ -56,13 +56,13 @@ export function Settings() {
     <div className="screen">
       <div className="topbar" />
       <div className="large-title">Settings</div>
-      <div className="subtitle">Ritual · data stays on this device</div>
+      <div className="subtitle">Rituals · data stays on this device</div>
 
       {isIOS() && !isStandalone() && (
         <div className="banner">
           <Smartphone size={26} color="var(--accent)" />
           <div className="small">
-            <b>Install on iPhone:</b> tap <Share size={14} style={{ verticalAlign: -2 }} /> Share in Safari → <b>Add to Home Screen</b> so Ritual opens full-screen and works offline like an app.
+            <b>Install on iPhone:</b> tap <Share size={14} style={{ verticalAlign: -2 }} /> Share in Safari → <b>Add to Home Screen</b> so Rituals opens full-screen and works offline like an app.
           </div>
         </div>
       )}
@@ -126,7 +126,7 @@ export async function importAnyFile(f: File): Promise<string | undefined> {
   } catch {
     throw new Error('That file isn’t valid JSON');
   }
-  if (data?.app !== 'ritual') throw new Error('Not a Ritual file');
+  if (data?.app !== 'ritual') throw new Error('Not a Rituals file');
   if (data.type === 'plans') {
     const r = await importPlanFile(data);
     return `Added ${r.plans} plan${r.plans === 1 ? '' : 's'} with ${r.items} items`;

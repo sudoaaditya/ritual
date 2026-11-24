@@ -400,7 +400,7 @@ export function PlanEditor({ plan, onClose }: { plan?: Plan; onClose: () => void
               style={{ width: '100%', color: 'var(--accent)' }}
               onClick={async () => {
                 const slug = plan.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'plan';
-                await shareJson(await exportPlanFile(plan.id), `ritual-${slug}.json`);
+                await shareJson(await exportPlanFile(plan.id), `rituals-${slug}.json`);
               }}
             >
               <Share2 size={18} /> <span className="grow" style={{ textAlign: 'left' }}>Share plan as a file</span>
