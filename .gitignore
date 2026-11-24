@@ -1,0 +1,11 @@
+node_modules
+dist
+dev-dist
+.DS_Store
+.vercel
+tsconfig.tsbuildinfo
+*.local
+.env*
+# personal routine / backup files — never commit
+my-routine*.json
+ritual-backup-*.json
